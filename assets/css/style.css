@@ -1,0 +1,25 @@
+/* ----------------
+  general selector 
+---------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    /* font-family: 'Livvic', sans-serif; */
+    font-family: 'Poppins', sans-serif;background-color: #e5e5f7;
+    
+   
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* #region--------Utiliti ---------- */
+
