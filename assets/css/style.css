@@ -11,8 +11,8 @@
 
 body {
     font-family: 'Circular Std', sans-serif;
-    
-   
+
+
 }
 
 img {
@@ -41,7 +41,7 @@ img {
     margin: auto;
 }
 
-.btn {
+.d_b {
     display: block;
 }
 
@@ -52,19 +52,18 @@ img {
 .mg_negative_20 {
     margin: 0 -20px;
 }
+
 /* #endregion--------Utiliti ---------- */
 
 /* #region-----------Debug------------- */
 
-.debug #app_sidebar {
-    background-color: rgb(13, 13, 1);
-}
+
 .debug #app_main {
     background-color: blue;
 }
 
-.debug #app_footer{
-background-color: green;
+.debug #app_footer {
+    background-color: green;
 }
 
 
@@ -75,7 +74,7 @@ background-color: green;
 ************ */
 
 .top_page {
-    height: calc(100vh - 50px);
+    height: calc(100vh - 70px);
 }
 
 /* ---------- sidebar --------- */
@@ -86,46 +85,100 @@ background-color: green;
     width: 50px;
     flex-direction: column;
     justify-content: space-between;
+    color: var(--sw-light);
+
 
 }
 
 #app_sidebar {
     padding: 10px 0;
+    background-color: var(--sw-dark);
 }
 
-.sidebar_top button, .sidebar_bottom button {
-    width: 50%;
+#app_sidebar span {
+    font-size: 12px;
+    vertical-align: middle;
+    margin-left: 5px;
+    display: none;
+}
+
+#app_sidebar button:not(.logo, .profile, .logo_lg, .add_playlist), #app_sidebar span, .playlist li, .playlist span {
+    filter: brightness(60%);
+}
+
+
+
+.sidebar_top button:not(.add_playlist),
+.sidebar_bottom button {
+    width: 30px;
     background-color: transparent;
     border: none;
     cursor: pointer;
     margin: 5px auto;
+    vertical-align: middle;
+
+
 }
 
 .logo {
     filter: invert(1);
 }
- 
+
+.logo_lg {
+    display: none;
+}
+
+
 /* playlist sidebar */
 
+.playlist {
+    display: none;
+}
 
+.playlist h5 {
+    margin: 20px 0 10px 0;
+}
+ 
+.playlist .add_playlist {
+    background-color: var(--sw-light_gray);
+    font-size: 35px;
+    border: none;
+    cursor: pointer;
+    margin: 0px 5px 5px 0;
+    width: 40px;
+    vertical-align: middle;
+    filter: brightness(100%);
+}
+
+.playlist li {
+    font-size: 12px;
+    margin: 15px 0;
+    list-style: none;
+}
 
 /* bottom side bar  */
 
 .sidebar_bottom .download_app {
-width: 15px;
+    width: 15px;
+    
 }
 
 .sidebar_bottom .profile {
- border-radius: 50%;
- overflow: hidden;
- aspect-ratio: 1 /1;
- background-color: var(--sw-light_gray);
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1 /1;
+    background-color: var(--sw-light_gray);
+}
+
+.sidebar_bottom .btn:last-child {
+    margin-top: 7px;
 }
 
 /* ---------- main --------- */
 
 #app_main {
-    width: calc(100% - 70px);
+    width: calc(100% - 50px);
+    text-align: left;
 }
 
 
@@ -135,4 +188,54 @@ width: 15px;
 
 #app_footer {
     height: 70px;
+}
+
+
+/* ************
+   RESPONSIVE
+************ */
+
+@media screen and (min-width: 480px) {
+
+/* sidebar responsive */
+
+    #app_sidebar {
+        width: 230px;
+        align-items: start;
+        padding-left: 15px;
+    }
+
+    #app_sidebar button:not(.logo_lg, .download_app, .add_playlist) {
+        width: 20px;
+    }
+
+    .sidebar_top,
+    .sidebar_bottom {
+        text-align: left;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    #app_sidebar .logo_lg {
+        width: 100px;
+        display: block;
+        margin-bottom: 10px;
+    }
+    #app_sidebar span {
+        display: inline-block;
+    }
+
+    .playlist {
+        display: block;
+    }
+
+    .sidebar_bottom .hr_download {
+
+        border-bottom: 1px solid var(--sw-light);
+        filter: brightness(60%);
+    }
+
+
 }
