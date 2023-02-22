@@ -7,11 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Web</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;600&family=Poppins:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -22,17 +18,23 @@
 
 <body class="debug">
     <div class="top_page d_flex">
-        <aside id="app_sidebar">
-            <div class="sidebar_top">
+        <aside id="app_sidebar" class="d_flex">
+            <div class="sidebar_top txt_c">
+                
+                    <button class="logo"><img src="./assets/img/favicon.ico" alt="Logo"></button>
+                    <button class="home"><img src="./assets/img/home.svg" alt="home"></button>
+                    <button class="search"><img src="./assets/img/search.svg" alt="search"></button>
+                    <button class="librerary"><img src="./assets/img/libreria.svg" alt="librery"></button>
+                    <div class="playlist">
+                    </div>
 
+                
             </div>
             <!-- /.sidebar_top -->
-            <div class="playlist">
-
-            </div>
-            <!-- /.playlist -->
-            <div class="sidebar_bottom">
-
+            <div class="sidebar_bottom txt_c">
+                
+                <button class="download_app btn"><img src="./assets/img/download.svg" alt="download"></button>
+                <button class="profile btn"><img src="./assets/img/profile.svg" alt="profile"></button>
             </div>
             <!-- /.sidebar_bottom -->
         </aside>

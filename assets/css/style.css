@@ -10,8 +10,7 @@
 
 
 body {
-    /* font-family: 'Livvic', sans-serif; */
-    font-family: 'Poppins', sans-serif;background-color: #e5e5f7;
+    font-family: 'Circular Std', sans-serif;
     
    
 }
@@ -38,14 +37,27 @@ img {
     display: flex;
 }
 
+.container {
+    margin: auto;
+}
 
+.btn {
+    display: block;
+}
 
+.txt_c {
+    text-align: center;
+}
+
+.mg_negative_20 {
+    margin: 0 -20px;
+}
 /* #endregion--------Utiliti ---------- */
 
 /* #region-----------Debug------------- */
 
 .debug #app_sidebar {
-    background-color: yellow;
+    background-color: rgb(13, 13, 1);
 }
 .debug #app_main {
     background-color: blue;
@@ -63,17 +75,52 @@ background-color: green;
 ************ */
 
 .top_page {
-    height: calc(100vh - 70px);
+    height: calc(100vh - 50px);
 }
 
 /* ---------- sidebar --------- */
 
+
+/* top side bar  */
 #app_sidebar {
-    width: 70px;
+    width: 50px;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 
+#app_sidebar {
+    padding: 10px 0;
+}
 
+.sidebar_top button, .sidebar_bottom button {
+    width: 50%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 5px auto;
+}
+
+.logo {
+    filter: invert(1);
+}
+ 
+/* playlist sidebar */
+
+
+
+/* bottom side bar  */
+
+.sidebar_bottom .download_app {
+width: 15px;
+}
+
+.sidebar_bottom .profile {
+ border-radius: 50%;
+ overflow: hidden;
+ aspect-ratio: 1 /1;
+ background-color: var(--sw-light_gray);
+}
 
 /* ---------- main --------- */
 
