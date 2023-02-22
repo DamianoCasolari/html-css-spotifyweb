@@ -23,3 +23,69 @@ img {
 
 /* #region--------Utiliti ---------- */
 
+:root {
+    --sw-primary: #141922;
+    --sw-light_gray: #a3a3a3;
+    --sw-flash_interaction: #86c62c;
+    --sw-footer: #282828;
+    --sw-dark: #000000;
+    --sw-light: #ffffff;
+
+}
+
+
+.d_flex {
+    display: flex;
+}
+
+
+
+/* #endregion--------Utiliti ---------- */
+
+/* #region-----------Debug------------- */
+
+.debug #app_sidebar {
+    background-color: yellow;
+}
+.debug #app_main {
+    background-color: blue;
+}
+
+.debug #app_footer{
+background-color: green;
+}
+
+
+/* #endregion-----------Debug------------- */
+
+/* ************
+     TOP
+************ */
+
+.top_page {
+    height: calc(100vh - 70px);
+}
+
+/* ---------- sidebar --------- */
+
+#app_sidebar {
+    width: 70px;
+
+}
+
+
+
+/* ---------- main --------- */
+
+#app_main {
+    width: calc(100% - 70px);
+}
+
+
+/* ************
+   FOOTER
+************ */
+
+#app_footer {
+    height: 70px;
+}
