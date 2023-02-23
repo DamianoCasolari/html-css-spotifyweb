@@ -201,10 +201,13 @@ img {
   }
   
   /* Handle on hover */
-  .items_playlist:hover::-webkit-scrollbar-thumb {
+  .items_playlist:hover::-webkit-scrollbar-thumb{
     background: rgba(139, 139, 139, 0.299); 
    
-    
+  }
+
+  #app_main:hover::-webkit-scrollbar-thumb {
+    background: rgba(139, 139, 139, 0.299); 
   }
 
 /* bottom side bar  */
@@ -241,6 +244,25 @@ img {
     
 }
 
+/* Upgrade zone  */
+
+.upgrade {
+    text-align: end;
+    background-color: #00000074;
+    position: sticky;
+    top: 0;
+
+}
+
+.upgrade .btn{
+border: 1px solid var(--sw-light);
+border-radius: 50px;
+padding: 10px 35px;
+margin: 20px 5px;
+color: var(--sw-light);
+font-size: 12px;
+
+}
 
 /* ************
    FOOTER
@@ -288,9 +310,11 @@ img {
     margin-left: 5%;
     flex-direction: column;
     filter: brightness(60%);
+    display: none;
 }
 
 /* CENTRAL block footer  */
+
 
 .music_function {
     width: 40%;
@@ -301,11 +325,12 @@ img {
     
 }
 
-.test {
+.container_button_area {
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 .button_area {
     height: 100%;
     max-width: 230px;
@@ -326,6 +351,10 @@ img {
     filter: invert(1);
     margin: 0 7px;
 
+}
+
+.shuffle, .repeat {
+    display: none;
 }
 
 .timing_area {
@@ -416,6 +445,20 @@ input[type="number"]{
    RESPONSIVE
 ************ */
 
+/* xs dimension (extra dimension) */
+@media screen and (min-width: 360px) {
+.heart_folder {
+
+    display: flex;
+}
+
+.shuffle, .repeat {
+    display: block;
+}
+
+}
+
+/* s dimension  */
 @media screen and (min-width: 480px) {
 
 /* sidebar responsive */
