@@ -324,6 +324,25 @@ img {
 
 }
 
+/* RIGHT block footer  */
+
+.other_function {
+    width: 30%;
+    align-items: center;
+    justify-content: end;
+}
+
+.other_function i {
+    font-size: 15px;
+    filter: invert(1);
+    margin: 0 5px;
+}
+
+
+.volume {
+    width: 50%; /* Width of the outside container */
+  }
+  
 
 /* ************
    RESPONSIVE
