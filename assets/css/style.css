@@ -49,6 +49,10 @@ img {
     text-align: center;
 }
 
+.mg_negative_5 {
+    margin: 0 -5px;
+}
+
 .mg_negative_20 {
     margin: 0 -20px;
 }
@@ -62,6 +66,26 @@ img {
 .m_lr_5 {
     margin: 0 5px;
 }
+
+.p_5 {
+    padding: 5px;
+}
+
+/* Columns selector  */
+
+.col_12 {
+    width: 100%;
+}
+
+.col_6 {
+    width: 50%;
+}
+
+.col_2 {
+    width: calc(100% / 12 * 6);
+}
+
+
 
 /* #endregion--------Utiliti ---------- */
 
@@ -243,7 +267,7 @@ img {
     text-align: left;
     background-color: var(--sw-primary);
     color: var(--sw-light);
-    
+
 }
 
 #app_main .container_for_scrollbar {
@@ -272,35 +296,52 @@ img {
     font-size: 12px;
 
 }
+
 /* Category zone  */
+
+
+.recently_played h2 {
+    margin: 30px 0;
+}
 
 .category {
     justify-content: center;
+    flex-wrap: wrap;
+
 }
 
-.category > div{
+.category>div {
     margin: 10px 10px 20px 10px;
     filter: brightness(60%);
-    font-size: 14px;
+    font-size: 12px;
     align-items: center;
     flex-direction: column;
     cursor: pointer;
+
 }
 
-.category > div:hover .border_up {
-    display: block;
-    
+.category>div:hover .border_up {
+    border-top: 3px solid var(--sw-flash_interaction);
+
 }
 
 .border_up {
-    display: none;
+    
     width: 20px;
     height: 1px;
-    border-top:3px solid var(--sw-flash_interaction) ;
+    border-top: 3px solid transparent;
 }
-/* .category .border_selection {
 
-} */
+/* recently played zone  */
+
+.container_cover {
+    flex-wrap: wrap;
+}
+
+.artist {
+    filter: brightness(60%);
+    font-size: 10px;
+}
 
 /* ************
    FOOTER
@@ -561,11 +602,6 @@ input[type="number"] {
         margin-left: 10%;
     }
 
-    /* cetral block  */
-
-    /* .button_area {   scatto a 768px
-    width: 50%;
-} */
 
     /* right block  */
 
@@ -577,5 +613,28 @@ input[type="number"] {
         display: block;
     }
 
+
+}
+
+/* md dimension ) */
+@media screen and (min-width: 768px) {
+   
+
+ .button_area {   
+    width: 50%;
+}
+
+.col_md_3 {
+    width: calc(100% / 12 * 3);
+}
+
+}
+/* lg dimension ) */
+@media screen and (min-width: 1279px) {
+   
+
+.col_lg_2 {
+    width: calc(100% / 12 * 2);
+}
 
 }
