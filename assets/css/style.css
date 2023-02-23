@@ -341,7 +341,7 @@ img {
 .other_function {
     width: 30%;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
 }
 
 .other_function i {
@@ -355,6 +355,7 @@ img {
 .volume {
     width: 30%; /* Width of the outside container */
     margin: 0 20px;
+    display: none;
   }
   
 
@@ -462,8 +463,19 @@ img {
 
 /* cetral block  */
 
-.button_area {
+/* .button_area {   scatto a 768px
     width: 50%;
+} */
+
+/* right block  */
+
+.other_function {  
+    justify-content: end;
 }
+
+.volume {
+    display: block;
+  }
+
 
 }
