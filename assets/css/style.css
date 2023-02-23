@@ -229,6 +229,7 @@ img {
     width: calc(100% - 50px);
     text-align: left;
     overflow-y: auto;
+    background-color: var(--sw-primary);
     
 }
 
@@ -237,13 +238,42 @@ img {
    FOOTER
 ************ */
 
+/* First block footer  */
+
 #app_footer {
+    background-color: var(--sw-footer);
+    color: var(--sw-light);
     height: 70px;
     position: fixed;
     width: 100%;
     bottom: 0;
     left: 0;
     z-index: 1000;
+}
+.selected_album {
+    align-items: center;
+    min-width: 80px;
+    width: 30%;
+    height: 100%;
+}
+
+.selected_album .cover {
+    margin: 0 10px
+}
+.cover img {
+    max-width: 25px;
+    
+}
+
+.info_cover *:not(.album) {
+    font-size: 10px;
+    filter: brightness(60%);
+} 
+
+.heart_folder {
+    margin-left: 20%;
+    flex-direction: column;
+    filter: brightness(60%);
 }
 
 
@@ -286,7 +316,7 @@ img {
     .playlist {
         display: block;
     }
-    
+
     .items_playlist li {
         display: block;
     }
@@ -296,6 +326,18 @@ img {
         border-bottom: 1px solid var(--sw-light);
         filter: brightness(60%);
     }
+
+/* ---------footer responsive-------- */
+
+
+.cover img {
+    max-width: 30px;
+    
+}
+.heart_folder {
+    flex-direction: row;
+    gap: 10px;
+}
 
 
 }
