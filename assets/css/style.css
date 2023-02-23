@@ -49,18 +49,16 @@ img {
     text-align: center;
 }
 
+.my_30 {
+    margin: 30px 0;
+} 
+
 .mg_negative_5 {
     margin: 0 -5px;
 }
 
 .mg_negative_20 {
     margin: 0 -20px;
-}
-
-.btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
 }
 
 .m_lr_5 {
@@ -71,6 +69,11 @@ img {
     padding: 5px;
 }
 
+.btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
 /* Columns selector  */
 
 .col_12 {
@@ -257,6 +260,19 @@ img {
     margin-top: 7px;
 }
 
+/* Create for  */
+ 
+.heading .subtitle {
+    font-size: 14px;
+    filter: brightness(60%);
+    margin-top: 5px;
+}
+
+/* Create for  */
+
+.more_love img {
+    border-radius: 50%;
+}
 
 /* ****************
         MAIN  
@@ -300,10 +316,6 @@ img {
 /* Category zone  */
 
 
-.recently_played h2 {
-    margin: 30px 0;
-}
-
 .category {
     justify-content: center;
     flex-wrap: wrap;
@@ -333,6 +345,7 @@ img {
 }
 
 /* recently played zone  */
+
 
 .container_cover {
     flex-wrap: wrap;
@@ -526,7 +539,7 @@ input[type="number"] {
    RESPONSIVE
 ************ */
 
-/* xs dimension (extra dimension) */
+/* ---------xs dimension (extra dimension)-------- */
 @media screen and (min-width: 360px) {
     .heart_folder {
 
@@ -540,7 +553,7 @@ input[type="number"] {
 
 }
 
-/* s dimension  */
+/* ------s dimension--------  */
 @media screen and (min-width: 480px) {
 
     /* sidebar responsive */
@@ -588,9 +601,9 @@ input[type="number"] {
         filter: brightness(60%);
     }
 
-    /* ---------footer responsive-------- */
+    /* footer responsive */
 
-    /* left block  */
+    /* left footer block  */
     .cover img {
         max-width: 30px;
 
@@ -603,7 +616,7 @@ input[type="number"] {
     }
 
 
-    /* right block  */
+    /* right footer block  */
 
     .other_function {
         justify-content: end;
@@ -616,10 +629,10 @@ input[type="number"] {
 
 }
 
-/* md dimension ) */
+/* -------md dimensio-------- */
 @media screen and (min-width: 768px) {
    
-
+/* main section  */
  .button_area {   
     width: 50%;
 }
@@ -629,12 +642,20 @@ input[type="number"] {
 }
 
 }
-/* lg dimension ) */
+/* ------lg dimension------ */
 @media screen and (min-width: 1279px) {
    
-
+/* main section  */
 .col_lg_2 {
     width: calc(100% / 12 * 2);
 }
+
+#app_main h6{
+    font-size: 16px;
+}
+#app_main .artist{
+    font-size: 12px;
+}
+
 
 }
