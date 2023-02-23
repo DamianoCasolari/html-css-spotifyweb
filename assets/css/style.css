@@ -51,7 +51,7 @@ img {
 
 .my_30 {
     margin: 30px 0;
-} 
+}
 
 .mg_negative_5 {
     margin: 0 -5px;
@@ -74,6 +74,7 @@ img {
     border: none;
     cursor: pointer;
 }
+
 /* Columns selector  */
 
 .col_12 {
@@ -260,19 +261,7 @@ img {
     margin-top: 7px;
 }
 
-/* Create for  */
- 
-.heading .subtitle {
-    font-size: 14px;
-    filter: brightness(60%);
-    margin-top: 5px;
-}
 
-/* Create for  */
-
-.more_love img {
-    border-radius: 50%;
-}
 
 /* ****************
         MAIN  
@@ -300,6 +289,7 @@ img {
     position: sticky;
     top: 0;
     z-index: 1000;
+    filter: brightness(60%);
 
 }
 
@@ -338,7 +328,7 @@ img {
 }
 
 .border_up {
-    
+
     width: 20px;
     height: 1px;
     border-top: 3px solid transparent;
@@ -356,6 +346,19 @@ img {
     font-size: 10px;
 }
 
+/* Create for  */
+
+.heading .subtitle {
+    font-size: 14px;
+    filter: brightness(60%);
+    margin-top: 5px;
+}
+
+/* Create for  */
+
+.more_love img {
+    border-radius: 50%;
+}
 /* ************
    FOOTER
 ************ */
@@ -393,16 +396,55 @@ img {
 
 }
 
-.info_cover *:not(.album) {
+.info_cover *:not(.album, .block_effect, .container_animation) {
     font-size: 10px;
     filter: brightness(60%);
+}
+
+.container_animation {
+    position: relative;
+}
+
+.block_effect {
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    filter: blur(2px);
+    background-color: var(--sw-footer);
+    z-index: -1;
+    /* border: 1px solid black; */
+}
+
+.left_wall {
+    top: -10px;
+    left: -32px;
+}
+.right_wall {
+    top: -10px;
+    right: -25px;
+}
+
+
+.info_cover .artist, .info_cover .song {
+    
+    animation-name: tilt;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: relative;
+    z-index: -4;
+   
 }
 
 .heart_folder {
     margin-left: 5%;
     flex-direction: column;
-    filter: brightness(60%);
     display: none;
+}
+
+.heart_folder i {
+    filter: brightness(60%);
+    cursor: pointer;
 }
 
 /* CENTRAL block footer  */
@@ -434,8 +476,9 @@ img {
 
 .button_area i:not(.play i) {
     font-size: 15px;
-    filter: invert(1);
+    filter: invert(1) brightness(60%);
     margin: 0 5px;
+    
 }
 
 .play i {
@@ -482,9 +525,10 @@ input[type="number"] {
 
 .other_function i {
     font-size: 15px;
-    filter: invert(1);
+    filter: invert(1) brightness(60%);
     margin: 0 5px;
     vertical-align: middle;
+    
 }
 
 
@@ -533,6 +577,41 @@ input[type="number"] {
 }
 
 
+/* ************
+   ANIMATION
+************ */
+
+.btn_h:hover {
+    filter: brightness(100%) !important;
+}
+.btn_h1:hover {
+    filter: invert(1) brightness(100%) !important;
+}
+
+.scale_h:hover {
+    transform: scale(1.1);
+}
+
+#app_sidebar span:hover, #app_sidebar li:hover {
+    filter: brightness(100%);
+}
+
+
+@keyframes tilt {
+    0% {
+        transform: translatex(0px);
+    }
+    33% {transform: translatex(30px);
+
+    }
+    66% {transform: translatex(-30px);
+
+    }
+    100% {transform: translatex(0px);
+
+    }
+
+}
 
 
 /* ************
@@ -631,31 +710,33 @@ input[type="number"] {
 
 /* -------md dimensio-------- */
 @media screen and (min-width: 768px) {
-   
-/* main section  */
- .button_area {   
-    width: 50%;
+
+    /* main section  */
+    .button_area {
+        width: 50%;
+    }
+
+    .col_md_3 {
+        width: calc(100% / 12 * 3);
+    }
+
 }
 
-.col_md_3 {
-    width: calc(100% / 12 * 3);
-}
-
-}
 /* ------lg dimension------ */
 @media screen and (min-width: 1279px) {
-   
-/* main section  */
-.col_lg_2 {
-    width: calc(100% / 12 * 2);
-}
 
-#app_main h6{
-    font-size: 16px;
-}
-#app_main .artist{
-    font-size: 12px;
-}
+    /* main section  */
+    .col_lg_2 {
+        width: calc(100% / 12 * 2);
+    }
+
+    #app_main h6 {
+        font-size: 16px;
+    }
+
+    #app_main .artist {
+        font-size: 12px;
+    }
 
 
 }
