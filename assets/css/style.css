@@ -110,7 +110,10 @@ img {
     cursor: pointer;
 }
 
-#app_sidebar button:not(.logo, .profile, .logo_lg, .add_playlist), #app_sidebar span, .items_playlist li, .playlist span {
+#app_sidebar button:not(.logo, .profile, .logo_lg, .add_playlist),
+#app_sidebar span,
+.items_playlist li,
+.playlist span {
     filter: brightness(60%);
 }
 
@@ -142,7 +145,7 @@ img {
 .playlist h5 {
     margin: 20px 0 10px 0;
 }
- 
+
 .playlist .add_playlist {
     background-color: var(--sw-light_gray);
     font-size: 35px;
@@ -161,16 +164,17 @@ img {
 .items_playlist {
     width: 100%;
     text-align: left;
-    
+
 }
 
 .items_playlist {
     overflow: auto;
     flex-grow: 1;
     transition-duration: 0.5s;
-    
-    
+
+
 }
+
 .items_playlist li {
     font-size: 12px;
     margin: 20px 0;
@@ -184,38 +188,38 @@ img {
 
 ::-webkit-scrollbar {
     width: 5px;
-  }
+}
 
-  /* Track */
-  ::-webkit-scrollbar-track {
-   background-color: trasparent; 
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: trasparent;
     border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: trasparent; 
-    border-radius: 10px;
-   
-   
-  }
-  
-  /* Handle on hover */
-  .items_playlist:hover::-webkit-scrollbar-thumb{
-    background: rgba(139, 139, 139, 0.299); 
-   
-  }
+}
 
-  #app_main:hover::-webkit-scrollbar-thumb {
-    background: rgba(139, 139, 139, 0.299); 
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: trasparent;
+    border-radius: 10px;
+
+
+}
+
+/* Handle on hover */
+.items_playlist:hover::-webkit-scrollbar-thumb {
+    background: rgba(139, 139, 139, 0.299);
+
+}
+
+.container_for_scrollbar:hover::-webkit-scrollbar-thumb {
+    background: rgba(139, 139, 139, 0.299);
+}
 
 /* bottom side bar  */
 
 
 .sidebar_bottom .download_app {
     width: 15px;
-    
+
 }
 
 .sidebar_bottom .profile {
@@ -234,14 +238,17 @@ img {
         MAIN  
 ******************* */
 
-
-
 #app_main {
     width: calc(100% - 50px);
     text-align: left;
-    overflow-y: auto;
     background-color: var(--sw-primary);
     
+}
+
+#app_main .container_for_scrollbar {
+    overflow-y: auto;
+    height: calc(100% - 70px);
+    padding: 10px;
 }
 
 /* Upgrade zone  */
@@ -251,16 +258,17 @@ img {
     background-color: #00000074;
     position: sticky;
     top: 0;
+    z-index: 1000;
 
 }
 
-.upgrade .btn{
-border: 1px solid var(--sw-light);
-border-radius: 50px;
-padding: 10px 35px;
-margin: 20px 5px;
-color: var(--sw-light);
-font-size: 12px;
+.upgrade .btn {
+    border: 1px solid var(--sw-light);
+    border-radius: 50px;
+    padding: 10px 35px;
+    margin: 20px 5px;
+    color: var(--sw-light);
+    font-size: 12px;
 
 }
 
@@ -298,13 +306,13 @@ font-size: 12px;
 
 .cover img {
     max-width: 25px;
-    
+
 }
 
 .info_cover *:not(.album) {
     font-size: 10px;
     filter: brightness(60%);
-} 
+}
 
 .heart_folder {
     margin-left: 5%;
@@ -322,7 +330,7 @@ font-size: 12px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
+
 }
 
 .container_button_area {
@@ -337,7 +345,7 @@ font-size: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 .button_area i:not(.play i) {
@@ -346,14 +354,15 @@ font-size: 12px;
     margin: 0 5px;
 }
 
-.play i{
+.play i {
     font-size: 30px;
     filter: invert(1);
     margin: 0 7px;
 
 }
 
-.shuffle, .repeat {
+.shuffle,
+.repeat {
     display: none;
 }
 
@@ -364,14 +373,14 @@ font-size: 12px;
     font-size: 12px;
 }
 
-input[type="number"]{
+input[type="number"] {
     background-color: transparent;
     border: none;
     width: 22px;
     color: var(--sw-light);
     font-size: 12px;
     font-family: 'Circular Std', sans-serif;
-    
+
 }
 
 .timing_area input[type="number"]::-webkit-inner-spin-button {
@@ -396,13 +405,14 @@ input[type="number"]{
 
 
 .volume {
-    width: 30%; /* Width of the outside container */
+    width: 30%;
+    /* Width of the outside container */
     margin: 0 20px;
     display: none;
-  }
-  
+}
 
-  .slider {
+
+.slider {
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
@@ -413,16 +423,16 @@ input[type="number"]{
     transition: opacity .2s;
     filter: brightness(60%);
     vertical-align: middle;
-    
 
-  }
-  
-  .slider:hover {
+
+}
+
+.slider:hover {
     opacity: 1;
     filter: brightness(100%);
-  }
-  
-  .slider::-webkit-slider-thumb {
+}
+
+.slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 5px;
@@ -431,13 +441,13 @@ input[type="number"]{
     background: var(--sw-light);
     cursor: pointer;
     outline: none;
-  }
+}
 
-  .slider:hover::-webkit-slider-thumb {
+.slider:hover::-webkit-slider-thumb {
     opacity: 1;
-     outline: 4px solid var(--sw-light);
-  }
-  
+    outline: 4px solid var(--sw-light);
+}
+
 
 
 
@@ -447,21 +457,22 @@ input[type="number"]{
 
 /* xs dimension (extra dimension) */
 @media screen and (min-width: 360px) {
-.heart_folder {
+    .heart_folder {
 
-    display: flex;
-}
+        display: flex;
+    }
 
-.shuffle, .repeat {
-    display: block;
-}
+    .shuffle,
+    .repeat {
+        display: block;
+    }
 
 }
 
 /* s dimension  */
 @media screen and (min-width: 480px) {
 
-/* sidebar responsive */
+    /* sidebar responsive */
 
     #app_sidebar {
         width: 230px;
@@ -487,6 +498,7 @@ input[type="number"]{
         display: block;
         margin-bottom: 10px;
     }
+
     #app_sidebar span {
         display: inline-block;
     }
@@ -505,34 +517,35 @@ input[type="number"]{
         filter: brightness(60%);
     }
 
-/* ---------footer responsive-------- */
+    /* ---------footer responsive-------- */
 
-/* left block  */
-.cover img {
-    max-width: 30px;
-    
-}
-.heart_folder {
-    flex-direction: row;
-    gap: 10px;
-    margin-left: 10%;
-}
+    /* left block  */
+    .cover img {
+        max-width: 30px;
 
-/* cetral block  */
+    }
 
-/* .button_area {   scatto a 768px
+    .heart_folder {
+        flex-direction: row;
+        gap: 10px;
+        margin-left: 10%;
+    }
+
+    /* cetral block  */
+
+    /* .button_area {   scatto a 768px
     width: 50%;
 } */
 
-/* right block  */
+    /* right block  */
 
-.other_function {  
-    justify-content: end;
-}
+    .other_function {
+        justify-content: end;
+    }
 
-.volume {
-    display: block;
-  }
+    .volume {
+        display: block;
+    }
 
 
 }
