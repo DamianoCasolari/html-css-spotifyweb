@@ -75,6 +75,13 @@ img {
     cursor: pointer;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Columns selector  */
 
 .col_12 {
@@ -275,6 +282,13 @@ img {
 
 }
 
+#app_main img,
+#app_main h6,
+#app_main .artist {
+    cursor: pointer;
+    display: inline-block;
+}
+
 #app_main .container_for_scrollbar {
     overflow-y: auto;
     height: calc(100% - 70px);
@@ -290,6 +304,7 @@ img {
     top: 0;
     z-index: 1000;
     filter: brightness(60%);
+    transition-duration: 0.3s;
 
 }
 
@@ -300,6 +315,7 @@ img {
     margin: 20px 5px;
     color: var(--sw-light);
     font-size: 12px;
+    
 
 }
 
@@ -319,6 +335,7 @@ img {
     align-items: center;
     flex-direction: column;
     cursor: pointer;
+    transition-duration: 0.3s;
 
 }
 
@@ -341,6 +358,24 @@ img {
     flex-wrap: wrap;
 }
 
+.single_cover_img {
+    position: relative;
+}
+
+.overlay {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: calc( 100% - 5px);
+    font-size: 50px;
+    cursor: pointer;
+    background-color: #0000008a;
+    
+}
+.overlay i {
+    filter: brightness(60%)
+}
+
 .artist {
     filter: brightness(60%);
     font-size: 10px;
@@ -356,9 +391,14 @@ img {
 
 /* Create for  */
 
+
+.more_love .overlay {
+    border-radius: 50%;
+}
 .more_love img {
     border-radius: 50%;
 }
+
 /* ************
    FOOTER
 ************ */
@@ -403,6 +443,7 @@ img {
 
 .container_animation {
     position: relative;
+    overflow-x: hidden;
 }
 
 .block_effect {
@@ -417,23 +458,25 @@ img {
 
 .left_wall {
     top: -10px;
-    left: -32px;
+    left: -28px;
 }
+
 .right_wall {
     top: -10px;
     right: -25px;
 }
 
 
-.info_cover .artist, .info_cover .song {
-    
+.info_cover .artist,
+.info_cover .song {
+
     animation-name: tilt;
     animation-duration: 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     position: relative;
     z-index: -4;
-   
+
 }
 
 .heart_folder {
@@ -478,13 +521,14 @@ img {
     font-size: 15px;
     filter: invert(1) brightness(60%);
     margin: 0 5px;
-    
+
 }
 
 .play i {
     font-size: 30px;
     filter: invert(1);
     margin: 0 7px;
+    transition-duration: 0.3s;
 
 }
 
@@ -528,7 +572,7 @@ input[type="number"] {
     filter: invert(1) brightness(60%);
     margin: 0 5px;
     vertical-align: middle;
-    
+
 }
 
 
@@ -584,6 +628,7 @@ input[type="number"] {
 .btn_h:hover {
     filter: brightness(100%) !important;
 }
+
 .btn_h1:hover {
     filter: invert(1) brightness(100%) !important;
 }
@@ -592,22 +637,37 @@ input[type="number"] {
     transform: scale(1.1);
 }
 
-#app_sidebar span:hover, #app_sidebar li:hover {
+#app_sidebar span:hover,
+#app_sidebar li:hover,
+.category>div:hover {
     filter: brightness(100%);
 }
+
+.single_cover_img:hover .overlay {
+    visibility: visible;
+    
+}
+
+
 
 
 @keyframes tilt {
     0% {
         transform: translatex(0px);
     }
-    33% {transform: translatex(30px);
+
+    33% {
+        transform: translatex(30px);
 
     }
-    66% {transform: translatex(-30px);
+
+    66% {
+        transform: translatex(-30px);
 
     }
-    100% {transform: translatex(0px);
+
+    100% {
+        transform: translatex(0px);
 
     }
 
