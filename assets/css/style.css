@@ -335,6 +335,20 @@ img {
     font-size: 12px;
 }
 
+input[type="number"]{
+    background-color: transparent;
+    border: none;
+    width: 22px;
+    color: var(--sw-light);
+    font-size: 12px;
+    font-family: 'Circular Std', sans-serif;
+    
+}
+
+.timing_area input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 /* RIGHT block footer  */
 
@@ -392,7 +406,7 @@ img {
 
   .slider:hover::-webkit-slider-thumb {
     opacity: 1;
-     outline: 2px solid var(--sw-light);
+     outline: 4px solid var(--sw-light);
   }
   
 
