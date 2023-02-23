@@ -242,6 +242,7 @@ img {
     width: calc(100% - 50px);
     text-align: left;
     background-color: var(--sw-primary);
+    color: var(--sw-light);
     
 }
 
@@ -271,6 +272,35 @@ img {
     font-size: 12px;
 
 }
+/* Category zone  */
+
+.category {
+    justify-content: center;
+}
+
+.category > div{
+    margin: 10px 10px 20px 10px;
+    filter: brightness(60%);
+    font-size: 14px;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.category > div:hover .border_up {
+    display: block;
+    
+}
+
+.border_up {
+    display: none;
+    width: 20px;
+    height: 1px;
+    border-top:3px solid var(--sw-flash_interaction) ;
+}
+/* .category .border_selection {
+
+} */
 
 /* ************
    FOOTER
