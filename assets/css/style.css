@@ -550,7 +550,7 @@ a {
 
 }
 
-.button_area i:not(.play i) {
+.button_area i:not(.play i, .spotify_play i) {
     font-size: 15px;
     filter: invert(1) brightness(60%);
     margin: 0 5px;
@@ -563,6 +563,14 @@ a {
     margin: 0 7px;
     transition-duration: 0.3s;
 
+}
+
+.spotify_play i {
+    font-size: 30px;
+    filter: invert(1);
+    margin: 0 7px;
+    transition-duration: 0.3s;
+    display: none;
 }
 
 .shuffle,
@@ -843,8 +851,12 @@ input[type="number"] {
     }
 
     .upgrade,
-    .playlist {
+    .playlist, .both_loghi, .play {
         display: none;
+    }
+
+    .spotify_play i {
+        display: inline-block;
     }
 
     #app_main .container_for_scrollbar {
